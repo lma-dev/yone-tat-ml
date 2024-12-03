@@ -2,6 +2,8 @@
 
 namespace Database\Factories;
 
+use App\Enums\AccountStatusType;
+use App\Enums\UserRoleType;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
@@ -28,6 +30,8 @@ class UserFactory extends Factory
             'email' => fake()->unique()->safeEmail(),
             'email_verified_at' => now(),
             'password' => '$2y$10$/wQTKHDVTKcZXxqvgXHR5.yOr6vjBkHoErWrI0vhnHCs6rhF8LTRW',
+            'role' => $this->faker->randomElement([UserRoleType::SUPER_ADMIN,  UserRoleType::ADMIN,  UserRoleType::MEMBER]),
+            'account_status' => $this->faker->randomElement([AccountStatusType::ACTIVE,  AccountStatusType::SUSPENDED]),
             'remember_token' => Str::random(10),
         ];
     }

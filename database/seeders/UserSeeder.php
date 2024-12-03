@@ -2,6 +2,8 @@
 
 namespace Database\Seeders;
 
+use App\Enums\AccountStatusType;
+use App\Enums\UserRoleType;
 use App\Models\User;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Str;
@@ -18,6 +20,8 @@ class UserSeeder extends Seeder
             'email' => 'superadmin@gmail.com',
             'email_verified_at' => now(),
             'password' => '$2y$10$/wQTKHDVTKcZXxqvgXHR5.yOr6vjBkHoErWrI0vhnHCs6rhF8LTRW',
+            'account_status' => AccountStatusType::ACTIVE,
+            'role' => UserRoleType::SUPER_ADMIN,
             'remember_token' => Str::random(10),
         ]);
         User::insert([
@@ -25,6 +29,8 @@ class UserSeeder extends Seeder
             'email' => 'admin@gmail.com',
             'email_verified_at' => now(),
             'password' => '$2y$10$/wQTKHDVTKcZXxqvgXHR5.yOr6vjBkHoErWrI0vhnHCs6rhF8LTRW',
+            'account_status' => AccountStatusType::ACTIVE,
+            'role' => UserRoleType::ADMIN,
             'remember_token' => Str::random(10),
         ]);
         User::insert([
@@ -32,6 +38,8 @@ class UserSeeder extends Seeder
             'email' => 'member@gmail.com',
             'email_verified_at' => now(),
             'password' => '$2y$10$/wQTKHDVTKcZXxqvgXHR5.yOr6vjBkHoErWrI0vhnHCs6rhF8LTRW',
+            'account_status' => AccountStatusType::ACTIVE,
+            'role' => UserRoleType::MEMBER,
             'remember_token' => Str::random(10),
         ]);
         $data = User::factory(5)->make();
