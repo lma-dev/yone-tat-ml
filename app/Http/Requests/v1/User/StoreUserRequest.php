@@ -25,8 +25,6 @@ class StoreUserRequest extends FormRequest
             'name' => 'required|max:255',
             'email' => 'required|email|unique:users',
             'password' => 'required|min:8',
-            'role' => 'required|in:ADMIN,MEMBER,SUPER_ADMIN',
-            'accountStatus' => 'required|in:ACTIVE,SUSPENDED',
         ];
     }
 }

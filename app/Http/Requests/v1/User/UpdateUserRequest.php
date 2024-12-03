@@ -26,8 +26,6 @@ class UpdateUserRequest extends FormRequest
             'name' => 'required|max:255',
             'email' => ['required', 'email', Rule::unique('users')->ignore($this->user)],
             'password' => 'nullable|min:8',
-            'role' => 'required|in:ADMIN,MEMBER,SUPER_ADMIN',
-            'accountStatus' => 'required|in:ACTIVE,SUSPENDED',
         ];
     }
 }
