@@ -2,7 +2,9 @@
 
 namespace App\Http\Requests\v1\LeaveType;
 
+use App\Enums\LeaveType;
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Validation\Rule;
 
 class StoreLeaveTypeRequest extends FormRequest
 {
@@ -25,6 +27,7 @@ class StoreLeaveTypeRequest extends FormRequest
             'type' => [
                 'required',
                 'string',
+                Rule::in(LeaveType::getValues())
             ],
             'totalDays' => 'required|integer',
         ];

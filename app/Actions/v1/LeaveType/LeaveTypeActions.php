@@ -9,7 +9,6 @@ use App\Services\v1\LeaveType\DeleteLeaveTypeService;
 use App\Services\v1\LeaveType\FetchLeaveTypeService;
 use App\Services\v1\LeaveType\UpdateLeaveTypeService;
 use Illuminate\Http\JsonResponse;
-use Illuminate\Support\Collection;
 
 class LeaveTypeActions
 {
@@ -20,7 +19,7 @@ class LeaveTypeActions
         $this->leaveRepository = $leaveRepository;
     }
 
-    public function fetchAllLeaveTypes(): Collection
+    public function fetchAllLeaveTypes(): JsonResponse
     {
         return (new FetchLeaveTypeService())($this->leaveRepository);
     }

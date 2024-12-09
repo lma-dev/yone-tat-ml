@@ -9,7 +9,6 @@ use App\Services\v1\User\DeleteUserService;
 use App\Services\v1\User\FetchUserService;
 use App\Services\v1\User\UpdateUserService;
 use Illuminate\Http\JsonResponse;
-use Illuminate\Support\Collection;
 
 class UserActions
 {
@@ -20,7 +19,7 @@ class UserActions
         $this->userRepository = $userRepository;
     }
 
-    public function fetchUsers(): Collection
+    public function fetchUsers(): JsonResponse
     {
         return (new FetchUserService())($this->userRepository);
     }

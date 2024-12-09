@@ -2,6 +2,7 @@
 
 return [
     App\Providers\AppServiceProvider::class,
+    App\Providers\AttendanceProvider::class,
     App\Providers\FortifyServiceProvider::class,
     App\Providers\LeaveTypeProvider::class,
     App\Providers\UserProvider::class,

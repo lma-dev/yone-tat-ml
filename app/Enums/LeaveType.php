@@ -15,5 +15,7 @@ final class LeaveType extends Enum
     public const PATERNITY = 'PATERNITY';
     public const UNPAID = 'UNPAID';
     public const SPECIAL = 'SPECIAL';
+    public const REMOTE = 'HALF_DAY';
+    public const ONSITE = 'ONSITE';
     public const OTHER = 'OTHER';
 }

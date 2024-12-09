@@ -42,10 +42,10 @@ class UserSeeder extends Seeder
             'role' => UserRoleType::MEMBER,
             'remember_token' => Str::random(10),
         ]);
-        $data = User::factory(5)->make();
-        $chunks = $data->chunk(10);
-        $chunks->each(function ($chunk) {
-            User::insert($chunk->toArray());
-        });
+        // $data = User::factory(5)->make();
+        // $chunks = $data->chunk(10);
+        // $chunks->each(function ($chunk) {
+        //     User::insert($chunk->toArray());
+        // });
     }
 }
