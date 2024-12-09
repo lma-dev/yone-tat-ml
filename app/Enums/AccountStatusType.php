@@ -6,10 +6,9 @@ namespace App\Enums;
 
 use BenSampo\Enum\Enum;
 
-
 final class AccountStatusType extends Enum
 {
-    const ACTIVE = 'ACTIVE';
+    public const ACTIVE = 'ACTIVE';
 
-    const SUSPENDED = 'SUSPENDED';
+    public const SUSPENDED = 'SUSPENDED';
 }

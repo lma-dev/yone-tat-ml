@@ -8,7 +8,7 @@ use BenSampo\Enum\Enum;
 
 final class UserRoleType extends Enum
 {
-    const SUPER_ADMIN = 'SUPER_ADMIN';
-    const ADMIN = 'ADMIN';
-    const MEMBER = 'MEMBER';
+    public const SUPER_ADMIN = 'SUPER_ADMIN';
+    public const ADMIN = 'ADMIN';
+    public const MEMBER = 'MEMBER';
 }
