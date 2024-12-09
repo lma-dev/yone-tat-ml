@@ -8,12 +8,12 @@ use BenSampo\Enum\Enum;
 
 final class LeaveType extends Enum
 {
-    const SICK = 'SICK';
-    const ANNUAL = 'ANNUAL';
-    const EARNED = 'EARNED';
-    const MATERNITY = 'MATERNITY';
-    const PATERNITY = 'PATERNITY';
-    const UNPAID = 'UNPAID';
-    const SPECIAL = 'SPECIAL';
-    const OTHER = 'OTHER';
+    public const SICK = 'SICK';
+    public const ANNUAL = 'ANNUAL';
+    public const EARNED = 'EARNED';
+    public const MATERNITY = 'MATERNITY';
+    public const PATERNITY = 'PATERNITY';
+    public const UNPAID = 'UNPAID';
+    public const SPECIAL = 'SPECIAL';
+    public const OTHER = 'OTHER';
 }

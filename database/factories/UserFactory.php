@@ -5,7 +5,6 @@ namespace Database\Factories;
 use App\Enums\AccountStatusType;
 use App\Enums\UserRoleType;
 use Illuminate\Database\Eloquent\Factories\Factory;
-use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
 
 /**

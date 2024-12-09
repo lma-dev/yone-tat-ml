@@ -12,7 +12,7 @@ use Illuminate\Http\JsonResponse;
 
 class UserController extends Controller
 {
-    private UserActions  $userAction;
+    private UserActions $userAction;
 
     public function __construct(UserActions $userAction)
     {

@@ -5,6 +5,7 @@ namespace App\Http\Resources\v1\LeaveType;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
 
+/** @mixin \App\Models\LeaveType */
 class LeaveTypeResource extends JsonResource
 {
     /**

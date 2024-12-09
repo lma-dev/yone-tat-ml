@@ -23,10 +23,10 @@ class LeaveTypeController extends Controller
         return $this->leaveAction->fetchAllLeaveTypes();
     }
 
-    public function show(LeaveType $leaveType): JsonResponse
+    public function show(LeaveType $leave_type): JsonResponse
     {
         return response()->json([
-            'data' => new LeaveTypeResource($leaveType),
+            'data' => new LeaveTypeResource($leave_type),
         ]);
     }
 
@@ -36,13 +36,13 @@ class LeaveTypeController extends Controller
         return $this->leaveAction->createLeaveType($formData);
     }
 
-    public function update(UpdateLeaveTypeRequest $request, LeaveType $leave): JsonResponse
+    public function update(UpdateLeaveTypeRequest $request, LeaveType $leave_type): JsonResponse
     {
-        return $this->leaveAction->updateLeaveType($request->safe()->all(), $leave);
+        return $this->leaveAction->updateLeaveType($request->safe()->all(), $leave_type);
     }
 
-    public function destroy(LeaveType $leave)
+    public function destroy(LeaveType $leave_type)
     {
-        return $this->leaveAction->deleteLeaveType($leave);
+        return $this->leaveAction->deleteLeaveType($leave_type);
     }
 }
