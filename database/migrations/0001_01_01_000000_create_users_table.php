@@ -1,5 +1,7 @@
 <?php
 
+use App\Enums\AccountStatusType;
+use App\Enums\UserRoleType;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -17,6 +19,8 @@ return new class extends Migration
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
+            $table->enum('role', UserRoleType::getValues())->default(UserRoleType::MEMBER);
+            $table->enum('account_status', AccountStatusType::getValues())->default(AccountStatusType::ACTIVE);
             $table->rememberToken();
             $table->timestamps();
         });
